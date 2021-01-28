@@ -59,12 +59,9 @@ const productSchema = new mongoose.Schema(
       type: String,
       enum: ["Black", "Brown", "Blue", "Gold", "Gray", "Green",  "Red", "Silver", "White", "Yellow"],
     },
-    colors: [
-      {
-        type: ObjectId,
-        ref: "Color",
-      },
-    ],
+    colors: {
+      type: Array,
+    },
     brand: {
       type: String,
       enum: ["Apple", "ASUS", "Belkin", "Brother", "Canon", "Dell", "Epson", "Huawei", "HP", "Lenovo", "LG", "Microsoft", "Oppo","Samsung", "Sony", "Toshiba", "Vivo", "Xerox", "Others", "No Brand"],
